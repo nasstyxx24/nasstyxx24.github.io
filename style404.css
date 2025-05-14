@@ -341,3 +341,150 @@ body {
         text-rendering: optimizeLegibility;
     }
 }
+
+/* Мобильная адаптация */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem 1.5rem;
+        background: rgba(17, 17, 17, 0.95);
+    }
+
+    .logo {
+        font-size: 1.8rem;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        background: var(--dark-bg);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        transition: 0.3s ease;
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+
+    .nav-links a {
+        font-size: 1.2rem;
+    }
+
+    .background-image {
+        width: 100%;
+        height: 100vh;
+        right: 0;
+        top: 0;
+        transform: none;
+        opacity: 0.08;
+    }
+
+    .background-image img {
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .error-container {
+        padding: 1rem;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .error-content {
+        padding: 2rem 1rem;
+        width: 100%;
+        max-width: 400px;
+        background: rgba(17, 17, 17, 0.7);
+        backdrop-filter: blur(10px);
+        border-radius: 15px;
+    }
+
+    .error-content h1 {
+        font-size: clamp(2.5rem, 8vw, 4rem);
+        margin-bottom: 1rem;
+    }
+
+    .error-content p {
+        font-size: clamp(0.9rem, 4vw, 1.1rem);
+        margin-bottom: 1.5rem;
+        padding: 0 1rem;
+    }
+
+    .back-button {
+        width: 80%;
+        max-width: 280px;
+        padding: 1rem;
+        font-size: 1rem;
+    }
+
+    .scroll-indicator {
+        bottom: 1.5rem;
+        width: 100%;
+        padding: 0 1rem;
+    }
+
+    .scroll-arrow {
+        font-size: 2rem;
+    }
+
+    .scroll-text {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .scroll-button {
+        width: 80%;
+        max-width: 280px;
+        padding: 1rem;
+        font-size: 1rem;
+    }
+}
+
+/* Маленькие телефоны */
+@media (max-width: 380px) {
+    .error-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .error-content p {
+        font-size: 0.9rem;
+    }
+
+    .back-button,
+    .scroll-button {
+        width: 90%;
+        font-size: 0.9rem;
+    }
+}
+
+/* Ландшафтная ориентация */
+@media (max-height: 500px) and (orientation: landscape) {
+    .error-container {
+        padding-top: 4rem;
+    }
+
+    .error-content {
+        padding: 1.5rem;
+    }
+
+    .error-content h1 {
+        font-size: 2rem;
+    }
+
+    .scroll-indicator {
+        display: none;
+    }
+
+    .background-image {
+        opacity: 0.05;
+    }
+}
