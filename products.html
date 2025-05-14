@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корисні продукти</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="page-transition">
+    <nav class="navbar">
+        <ul class="nav-list">
+            <li><a href="index.html">Головна</a></li>
+            <li><a href="tips.html">Поради</a></li>
+            <li><a href="products.html">Корисні продукти</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Корисні продукти для здорового харчування</h1>
+        <p>Дізнайтеся, які продукти варто включити у свій раціон</p>
+    </header>
+
+    <div class="container">
+        <div class="products-grid">
+            <div class="product-card">
+                <img src="img/11.jpg" alt="Овочі">
+                <h3>Овочі</h3>
+                <p>Джерело вітамінів, мінералів та клітковини. Рекомендується їсти різнокольорові овочі щодня.</p>
+            </div>
+
+            <div class="product-card">
+                <img src="img/12.jpg" alt="Фрукти">
+                <h3>Фрукти</h3>
+                <p>Природні солодощі, багаті на антиоксиданти та вітаміни.</p>
+            </div>
+
+            <div class="product-card">
+                <img src="img/13.jpg" alt="Злаки">
+                <h3>Цільнозернові продукти</h3>
+                <p>Важливе джерело енергії та клітковини для організму.</p>
+            </div>
+
+            <div class="product-card">
+                <img src="img/14.jpg" alt="Риба">
+                <h3>Риба</h3>
+                <p>Багата на омега-3 жирні кислоти та білок.</p>
+            </div>
+
+            <div class="product-card">
+                <img src="img/15.jpg" alt="Горіхи">
+                <h3>Горіхи та насіння</h3>
+                <p>Корисні жири та білки в компактній формі.</p>
+            </div>
+
+            <div class="product-card">
+                <img src="img/16.jpg" alt="Бобові">
+                <h3>Бобові</h3>
+                <p>Відмінне джерело рослинного білка та клітковини.</p>
+            </div>
+        </div>
+
+        <section class="tips-section">
+            <h2>Корисні поради щодо вживання продуктів</h2>
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <i class="fas fa-clock"></i>
+                    <h4>Час прийому їжі</h4>
+                    <p>Намагайтеся їсти в один і той же час, це допоможе налагодити метаболізм</p>
+                </div>
+                <div class="tip-card">
+                    <i class="fas fa-water"></i>
+                    <h4>Вода</h4>
+                    <p>Пийте достатньо води протягом дня, особливо між прийомами їжі</p>
+                </div>
+                <div class="tip-card">
+                    <i class="fas fa-balance-scale"></i>
+                    <h4>Порції</h4>
+                    <p>Контролюйте розмір порцій для підтримки здорової ваги</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <h2>Часті запитання</h2>
+            <div class="faq-list">
+                <details class="faq-item">
+                    <summary>Як правильно зберігати продукти?</summary>
+                    <p>Кожен продукт потребує особливих умов зберігання. Овочі та фрукти найкраще тримати в холодильнику, горіхи - в сухому прохолодному місці, а хліб - при кімнатній температурі.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Скільки порцій овочів потрібно з'їдати щодня?</summary>
+                    <p>Рекомендується вживати 5-7 порцій овочів та фруктів щодня. Одна порція - це приблизно жменя продукту.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>Як зробити здорове харчування смачним?</summary>
+                    <p>Експериментуйте з приправами, використовуйте різні способи приготування та комбінуйте продукти між собою.</p>
+                </details>
+            </div>
+        </section>
+
+        <section class="calculator-section">
+            <h2>Калькулятор денної норми калорій</h2>
+            <div class="calculator-form">
+                <div class="form-group">
+                    <label for="weight">Вага (кг):</label>
+                    <input type="number" id="weight" min="30" max="200">
+                </div>
+                <div class="form-group">
+                    <label for="height">Зріст (см):</label>
+                    <input type="number" id="height" min="100" max="250">
+                </div>
+                <div class="form-group">
+                    <label for="age">Вік:</label>
+                    <input type="number" id="age" min="12" max="100">
+                </div>
+                <div class="form-group">
+                    <label for="activity">Рівень активності:</label>
+                    <select id="activity">
+                        <option value="1.2">Малорухливий</option>
+                        <option value="1.375">Легка активність</option>
+                        <option value="1.55">Середня активність</option>
+                        <option value="1.725">Висока активність</option>
+                    </select>
+                </div>
+                <button onclick="calculateCalories()" class="calc-button">Розрахувати</button>
+                <div id="result" class="calc-result"></div>
+            </div>
+        </section>
+
+        <section class="seasonal-section">
+            <h2>Сезонні продукти</h2>
+            <div class="season-tabs">
+                <button class="season-tab active" data-season="spring">Весна</button>
+                <button class="season-tab" data-season="summer">Літо</button>
+                <button class="season-tab" data-season="autumn">Осінь</button>
+                <button class="season-tab" data-season="winter">Зима</button>
+            </div>
+            <div class="season-content">
+                <div class="season-products" id="spring">
+                    <div class="season-product">
+                        <img src="img/редиска.jpg" alt="Редиска">
+                        <h4>Редиска</h4>
+                    </div>
+                    <!-- Добавьте больше сезонных продуктов -->
+                </div>
+                <!-- Добавьте контент для других сезонов -->
+            </div>
+        </section>
+
+        <section class="recipes-section">
+            <h2>Корисні рецепти</h2>
+            <div class="recipes-grid">
+                <div class="recipe-card">
+                    <img src="img/Салат з кіноа.jpg" alt="Салат">
+                    <div class="recipe-content">
+                        <h3>Салат з кіноа</h3>
+                        <div class="recipe-info">
+                            <span><i class="fas fa-clock"></i> 20 хв</span>
+                            <span><i class="fas fa-fire"></i> 250 ккал</span>
+                        </div>
+                        <button class="recipe-btn" data-recipe="1">Дивитись рецепт</button>
+                    </div>
+                </div>
+
+                <div class="recipe-card">
+                    <img src="img/Зеленийсмузі.webp" alt="Смузі">
+                    <div class="recipe-content">
+                        <h3>Зелений смузі</h3>
+                        <div class="recipe-info">
+                            <span><i class="fas fa-clock"></i> 5 хв</span>
+                            <span><i class="fas fa-fire"></i> 150 ккал</span>
+                        </div>
+                        <button class="recipe-btn" data-recipe="2">Дивитись рецепт</button>
+                    </div>
+                </div>
+
+                <div class="recipe-card">
+                    <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061" alt="Боул">
+                    <div class="recipe-content">
+                        <h3>Боул з авокадо</h3>
+                        <div class="recipe-info">
+                            <span><i class="fas fa-clock"></i> 15 хв</span>
+                            <span><i class="fas fa-fire"></i> 320 ккал</span>
+                        </div>
+                        <button class="recipe-btn" data-recipe="3">Дивитись рецепт</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Модальное окно для рецептов -->
+            <div id="recipeModal" class="modal">
+                <div class="modal-content">
+                    <span class="close-modal">&times;</span>
+                    <h3 id="modalTitle"></h3>
+                    <div class="recipe-details">
+                        <div id="modalIngredients"></div>
+                        <div id="modalInstructions"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="meal-planner">
+            <h2>Планувальник харчування на тиждень</h2>
+            <div class="meal-planner-content">
+                <div class="meal-days">
+                    <button class="day-tab active" data-day="monday">Пн</button>
+                    <button class="day-tab" data-day="tuesday">Вт</button>
+                    <button class="day-tab" data-day="wednesday">Ср</button>
+                    <button class="day-tab" data-day="thursday">Чт</button>
+                    <button class="day-tab" data-day="friday">Пт</button>
+                    <button class="day-tab" data-day="saturday">Сб</button>
+                    <button class="day-tab" data-day="sunday">Нд</button>
+                </div>
+                
+                <div id="meal-container" class="meal-content active">
+                    <!-- Сюда будет добавляться контент через JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <a href="index.html" class="nav-button">← Повернутися на головну</a>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
