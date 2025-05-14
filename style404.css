@@ -235,3 +235,109 @@ body {
         transform: translateY(-5px);
     }
 }
+
+/* Добавьте в конец файла */
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1.5rem;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .nav-links {
+        display: none; /* Скрываем меню на мобильных */
+    }
+
+    .background-image {
+        width: 70%;
+        height: 40vh;
+        right: 50%;
+        top: 65%;
+        transform: translate(50%, -50%);
+        z-index: -1;
+    }
+
+    .error-container {
+        padding: 1.5rem;
+        text-align: center;
+        height: auto;
+        margin-top: 25vh;
+    }
+
+    .error-content {
+        max-width: 100%;
+    }
+
+    .error-content h1 {
+        font-size: 3rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .error-content p {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .back-button {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .scroll-indicator {
+        bottom: 1rem;
+        width: 90%;
+    }
+
+    .scroll-button {
+        width: 100%;
+        text-align: center;
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .error-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .background-image {
+        width: 90%;
+        height: 35vh;
+        top: 60%;
+    }
+
+    .scroll-text {
+        font-size: 0.9rem;
+    }
+
+    .scroll-button {
+        font-size: 1rem;
+        padding: 0.8rem;
+    }
+}
+
+/* Добавим поддержку ландшафтной ориентации */
+@media (max-height: 600px) and (orientation: landscape) {
+    .background-image {
+        height: 50vh;
+        top: 55%;
+    }
+
+    .error-container {
+        margin-top: 15vh;
+    }
+
+    .scroll-indicator {
+        display: none; /* Скрываем индикатор прокрутки в ландшафтном режиме */
+    }
+}
+
+/* Добавим стили для устройств с высоким DPI */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .error-content h1 {
+        text-rendering: optimizeLegibility;
+    }
+}
